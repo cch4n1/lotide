@@ -1,0 +1,14 @@
+// assertEqual function for testing
+const assertEqual = require('../assertEqual');
+const eqArrays = require('../eqArrays');
+
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => true
+assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false); // => false
+
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => true
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false); // => false
+
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => true
+assertEqual(eqArrays([1, 2, 3], [4, 5, 6]), true); // => should FAIL
+assertEqual(eqArrays([1, 2, 3], ["A", "B", "C"]), true); // => should FAIL
+assertEqual(eqArrays([1, 2, 3], []), true); // => should FAIL
