@@ -1,5 +1,3 @@
-const assertEqual = require('../assertEqual');
-// mocha chai 
 const assert = require('chai').assert;
 const head = require('../head');
 
