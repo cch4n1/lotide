@@ -1,11 +1,4 @@
-const assertEqual = function(actual, expected) {
-  actual === expected ?
-    console.log(`✅ Assertion Passed: ${actual} === ${expected}`)
-    : console.log(`🚫 Assertion Failed: ${actual} !== ${expected}`);
-};
-
-//findKeyByValue starts here
-
+//returns the first object key found based on the value
 const findKeyByValue = function(object, value) {
   const objectKeys = Object.keys(object);
 
@@ -17,13 +10,4 @@ const findKeyByValue = function(object, value) {
   return undefined;
 };
 
-const bestTVShowsByGenre = {
-  sci_fi: "The Expanse",
-  comedy: "Brooklyn Nine-Nine",
-  drama:  "The Wire"
-};
-
-findKeyByValue(bestTVShowsByGenre, "The Wire");
-
-assertEqual(findKeyByValue(bestTVShowsByGenre, "The Wire"), "drama");
-assertEqual(findKeyByValue(bestTVShowsByGenre, "That '70s Show"), undefined);
+module.exports = findKeyByValue;
