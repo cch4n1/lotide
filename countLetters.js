@@ -15,13 +15,4 @@ const countLetters = function (lettersToCount) {
   return results;
 }
 
-// console.log(countLetters("Lighthouse Labs"))
-
-// const result1 = countLetters("Lighthouse Labs");
-
-// assertEqual(result1.l, 2)
-// assertEqual(result1[" "], undefined)
-// assertEqual(result1.c, undefined)
-// assertEqual(result1.s, 2)
-
 module.exports = countLetters;
