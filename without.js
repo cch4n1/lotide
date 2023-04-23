@@ -3,22 +3,22 @@
 //are not present in the itemsToRemove array.
 
 const without = function(source, itemsToRemove) {
-  let returnArray = [];
   //store results
+  const returnArray = [];
+  //loop through source array
   for (let i = 0; i < source.length; i++) {
-    //loop through source array
-    let found = false;
     //declare found switch
+    let found = false;
+    //loop through itemsToRemove array
     for (let j = 0; j < itemsToRemove.length; j++) {
-      //loop through itemsToRemove array
+      //if item in source matches item in itemToRemove, don't add it to returnArray
       if (source[i] === itemsToRemove[j]) {
         found = true;
-        //if item in source matches item in itemToRemove, found = true
       }
     }
+    //if item in source was not found in itemToRemove, add to returnArray
     if (!found) {
       returnArray.push(source[i]);
-      //if item in source was not found in itemToRemove, push to returnArray
     }
   }
 

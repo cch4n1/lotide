@@ -1,15 +1,16 @@
 //returns a slice of the array with elements taken from the beginning. It should keep going until the callback/predicate returns a truthy value.
 //the callback should only be provided one value: The item in the array.
 const takeUntil = function(array, callback) {
-  const results = [];
   //stores results
+  const results = [];
+  //loop through input array
   for (let item of array) {
+    //if callback is true for item, exit loop
     if (callback(item)) {
       break;
-      //if callback is true for item, exit loop
     }
-    results.push(item);
     //otherwise, add item to results
+    results.push(item);
   }
   return results;
 };

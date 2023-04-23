@@ -1,5 +1,5 @@
-const head   = require('./head');
-const tail   = require('./tail');
+const head = require('./head');
+const tail = require('./tail');
 const middle = require('./middle');
 const flatten = require('./flatten');
 const countLetters = require('./countLetters');
@@ -17,7 +17,6 @@ const takeUntil = require('./takeUntil');
 const without = require('./without');
 
 module.exports = {
-
   head,
   tail,
   middle,
@@ -35,5 +34,4 @@ module.exports = {
   map,
   takeUntil,
   without,
-
 };
