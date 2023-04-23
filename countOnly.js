@@ -1,4 +1,4 @@
-// takes in an array and returns an object that shows the number of times an item appears in the array.
+// Takes in an array (allItems) and an object (itemsToCount) and returns an object with the count of each item in the allItems array that matches a key in the itemsToCount object.
 
 // allItems: an array of strings we need to look through
 // itemsToCount: an object specifying what to count
@@ -8,18 +8,17 @@ const countOnly = function (allItems, itemsToCount) {
 
   for (const item of allItems) {
 
-    // inside the loop, 
-    // increment the counter for each item:
-    // set a property with that string key to:
-    // the value that was already there (or zero if nothing there) with 1 added to it.
-    // Lastly, we need to be more specific about what should be counted, ignoring the other items.
-
-    // if condition to only increment our count in results if the item is found in the itemsToCount object.
     if (itemsToCount[item]) {
+       // If the 'item' matches a key in the 'itemsToCount' object:
       if (results[item]) {
+        // If the 'item' already exists as a key in the 'results' object:
         results[item] += 1;
+         // Increment the count for this 'item' by 1.
       } else {
+        // If the 'item' doesn't already exist as a key in the 'results' object:
         results[item] = 1;
+         // Add a new key to the 'results' object for this 'item', with a value of 1.
+
       }
     }
   }
